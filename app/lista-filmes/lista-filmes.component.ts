@@ -16,12 +16,11 @@ export class ListaFilmesComponent implements OnInit {
   constructor(private filmesService: FilmesService) { }
 
   ngOnInit(): void {
-		this.getFilmes();
-		console.log(this.filmes);
+		
 	}
 	
 	getFilmes(): void{
-		this.filmesService.getFilmes();
+		this.filmesService.getFilmes().subscribe(filmes => this.filmes = filmes);
 	}
 
 	getFilme(id: number): void{

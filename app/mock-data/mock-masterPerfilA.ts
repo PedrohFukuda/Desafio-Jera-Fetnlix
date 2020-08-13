@@ -6,7 +6,7 @@ export const MASTER: MasterPerfil[] = [
 		email: 'AA@A',
 		senha: 'AA',
 		dtNascimento: 'AA/AA/AA',
-		perfilBase: { id: 0, nome: 'Alpha' },
+		perfilBase: { id: 0, nome: 'Alpha', lsFilmesAssistir: [4, 2, 3, 1] },
 		idConta: 0
 	},
 	{
@@ -14,7 +14,7 @@ export const MASTER: MasterPerfil[] = [
 		email: 'BB@B',
 		senha: 'BB',
 		dtNascimento: 'BB/BB/BB',
-		perfilBase: { id: 1, nome: 'Beta'},
+		perfilBase: { id: 1, nome: 'Beta', lsFilmesAssistir: [2, 1, 0, 3]},
 		idConta: 1
 	}
 ];

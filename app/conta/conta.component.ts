@@ -17,7 +17,7 @@ import { Location } from '@angular/common';
   styleUrls: ['./conta.component.css']
 })
 export class ContaComponent implements OnInit {
-	conta: Conta;
+	@Input() conta: Conta;
 	currMaster: MasterPerfil;
 	currPerfis: Perfil[];
 	
@@ -34,8 +34,10 @@ export class ContaComponent implements OnInit {
 	getConta(): void{
 		const id = +this.route.snapshot.paramMap.get('id');
 		this.contaService.getConta(id).subscribe(conta => this.conta = conta);
-		this.currMaster = this.conta.masterPerfil;
-		this.currPerfis = this.conta.perfis;
+		if (this.conta !== undefined){
+			this.currMaster = this.conta.masterPerfil;
+			this.currPerfis = this.conta.perfis;
+		}
 	}
 
 	getMasterPerfil(id: number): MasterPerfil{

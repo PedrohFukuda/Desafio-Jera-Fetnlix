@@ -9,17 +9,31 @@ import { MASTER } from '../mock-data/mock-masterPerfilA'
   providedIn: 'root'
 })
 export class MasterPerfilService {
+	currId: number = 2;
 
 	constructor() { }
 
-	getPerfis(): Observable<MasterPerfil[]> {
-		return of(MASTER);
-	}
+	//GETS
 
 	getPerfil(id: number): Observable<MasterPerfil> {
-		console.log("Buscando perfil");
-		console.log(MASTER.find(masterPerfil => masterPerfil.id === id));
 		return of(MASTER.find(masterPerfil => masterPerfil.id === id));
+	}
+
+	//ADDS
+
+	create(emailTx: string, senhaTx: string, contaId: number): MasterPerfil{
+		const master: MasterPerfil = {
+			id: this.currId,
+			email: emailTx,
+			senha: senhaTx,
+			dtNascimento: '00/00/00',
+			perfilBase: { id: 1, nome: "Perfil principal", lsFilmesAssistir: []},
+			idConta: contaId
+		};
+		MASTER.push(master);
+
+		this.currId++;
+		return master;
 	}
 	
 }

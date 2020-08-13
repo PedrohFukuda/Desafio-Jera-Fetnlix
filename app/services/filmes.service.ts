@@ -9,11 +9,24 @@ import { FILMES } from '../mock-data/mock-filmes'
   providedIn: 'root'
 })
 export class FilmesService {
-	filmes: Observable<Filme[]>;
+	filmes: Filme[];
+	aux: number;
 
 	constructor() { }
 	
+	//GETS
 	getFilmes(): Observable<Filme[]> {
+		return of(FILMES);
+	}
+
+	getFilmesByIds(idList: number[]): Observable<Filme[]> {
+		this.aux = 0;
+		for (let id of idList){
+			this.getFilme(id)
+				.subscribe(filme => this.filmes[this.aux] = filme);
+			if (this.filmes[this.aux] !== undefined)
+				this.aux++;
+		}
 		return of(FILMES);
 	}
 

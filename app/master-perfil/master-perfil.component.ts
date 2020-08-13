@@ -17,14 +17,10 @@ export class MasterPerfilComponent implements OnInit {
 
   ngOnInit(): void {
 		this.getPerfil(this.masterPerfil.id);
-		console.log("Master perfis recuperados:");
-		console.log(this.masterPerfil);
 	}
 	
 	getPerfil(id: number): void{
 		this.masterService.getPerfil(id);
-		console.log('Master perfil pego: ');
-		console.log(this.masterPerfil);
 	}
 
 }

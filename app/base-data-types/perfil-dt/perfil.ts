@@ -3,6 +3,6 @@ import { Filme } from '../filme';
 export interface Perfil {
 	id: number;
 	nome: string;
-	//lsFilmesAssistir: number[];
+	lsFilmesAssistir: number[];
 	//lsFilmesAssistidos: Filme[];
 }
