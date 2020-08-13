@@ -1,0 +1,8 @@
+<h1>Lista de filmes</h1>
+<div *ngIf="filmes">
+	<ul class="filmes">
+		<li *ngFor="let filme of filmes">
+			<div>{{filme.nome}}</div>
+		</li>
+	</ul>
+</div>

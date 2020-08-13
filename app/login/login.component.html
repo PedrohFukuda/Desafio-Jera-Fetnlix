@@ -1,0 +1,21 @@
+<div>
+	<div>
+		<input [(ngModel)]="emailTxt" type="email" placeholder="email"/>
+	</div>
+	<div>
+		<input [(ngModel)]="senhaTxt" type="text" placeholder="senha"/>
+	</div>
+	<div>
+		<button (click)="logar()"><span>Logar</span></button>
+		<div *ngIf="conta">
+			<a routerLink="/conta/{{contaId}}"></a>
+		</div>
+		<!-------------------------------------------------------->
+		<!--Botões facilitadores, remover antes da versão final--->
+		<!-------------------------------------------------------->
+		<button routerLink="/conta/0"><span>conta A</span></button>
+		<button routerLink="/conta/1"><span>conta B</span></button>
+		<!-------------------------------------------------------->
+		<!-------------------------------------------------------->
+	</div>
+</div>

@@ -1,0 +1,23 @@
+<div *ngIf="masterPerfil">
+	<h3>Detalhes do perfil {{this.masterPerfil.nome}}</h3>
+	<div>
+		<labe>nome:
+			<input [(ngModel)]="this.masterPerfil.perfilBase.nome" placeholder="nome"/>
+		</labe>
+	</div>
+	<div>
+		<labe>email:
+			<input [(ngModel)]="this.masterPerfil.email" placeholder="email"/>
+		</labe>
+	</div>
+	<div>
+		<labe>senha:
+			<input [(ngModel)]="this.masterPerfil.senha" placeholder="senha"/>
+		</labe>
+	</div>
+	<div>
+		<labe>dtNascimento:
+			<input [(ngModel)]="this.masterPerfil.dtNascimento" placeholder="dtNascimento"/>
+		</labe>
+	</div>
+</div>

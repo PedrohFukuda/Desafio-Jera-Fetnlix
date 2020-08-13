@@ -1,0 +1,5 @@
+<div *ngIf="conta">
+	<h2>Dados da Conta</h2>
+	<app-master-perfil [masterPerfil]="currMaster"></app-master-perfil>
+	<app-perfis [perfis]="currPerfis" [conta]="conta"></app-perfis>
+</div>

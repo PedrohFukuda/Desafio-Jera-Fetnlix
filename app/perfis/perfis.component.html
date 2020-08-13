@@ -1,0 +1,8 @@
+<h2>Perfis</h2>
+<ul class="perfis">
+	<li *ngFor="let perfil of perfis">
+		<div><span>Nome: </span>
+			<a routerLink="/conta/{{conta.id}}/perfil/{{perfil.id}}">{{perfil.nome}}</a>
+		</div>
+	</li>
+</ul>

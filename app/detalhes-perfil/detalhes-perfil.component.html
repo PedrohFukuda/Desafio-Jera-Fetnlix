@@ -1,0 +1,14 @@
+<div *ngIf="perfil">
+
+	<h2>Detalhes de {{perfil.nome | uppercase}}</h2>
+	<div>
+		<label>
+			<input [(ngModel)]="perfil.nome" placeholder="Nome"/>
+		</label>
+	</div>
+	
+	<button (click)="goBack()">go back</button>
+	<!--TODO: CHAMAR O LISTA FILMES -->
+	<app-lista-filmes></app-lista-filmes>
+
+</div>

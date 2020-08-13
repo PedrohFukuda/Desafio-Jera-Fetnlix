@@ -1,0 +1,11 @@
+<div *ngIf="contas">
+
+	<h2>Lista de Contas</h2>
+	<ul class="contas">
+		<li *ngFor="let conta of contas">
+			<div><span>id: </span>
+				<a routerLink="/conta/{{conta.id}}">{{conta.masterPerfil.perfilBase.nome}}</a>
+			</div>
+		</li>
+	</ul>
+</div>
