@@ -9,7 +9,7 @@ import { ListaContasComponent } from './lista-contas/lista-contas.component';
 const routes: Routes = [
 	{ path: 'conta/:id', component: ContaComponent },
 	{ path: 'login', component: LoginComponent },
-	{ path: 'conta/perfil/:id', component: DetalhesPerfilComponent },
+	{ path: 'conta/:idConta/perfil/:idPerfil', component: DetalhesPerfilComponent },
 	{ path: 'allcontas', component: ListaContasComponent },
 	{ path: '', redirectTo: '/login', pathMatch: 'full' }
 ];
